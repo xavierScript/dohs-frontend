@@ -74,7 +74,7 @@ const AnimalCases = () => {
       const token = localStorage.getItem("authToken");
 
       const response = await axios.get(
-        "https://backend.onehealth-wwrg.com/api/v1/reports/animal",
+        `${import.meta.env.VITE_API_BASE_URL}/reports/animal`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -246,7 +246,7 @@ const AnimalCases = () => {
     try {
       const token = localStorage.getItem("authToken");
       const response = await axios.post(
-        "https://backend.onehealth-wwrg.com/api/v1/reports/animal",
+        `${import.meta.env.VITE_API_BASE_URL}/reports/animal`,
         formData,
         {
           headers: {

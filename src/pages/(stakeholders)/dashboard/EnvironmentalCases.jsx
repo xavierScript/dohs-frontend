@@ -70,7 +70,7 @@ const EnvironmentalCases = () => {
       const token = localStorage.getItem("authToken");
 
       const response = await axios.get(
-        "https://backend.onehealth-wwrg.com/api/v1/reports/env",
+        `${import.meta.env.VITE_API_BASE_URL}/reports/env`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -234,7 +234,7 @@ const EnvironmentalCases = () => {
     try {
       const token = localStorage.getItem("authToken");
       const response = await axios.post(
-        "https://backend.onehealth-wwrg.com/api/v1/reports/env",
+        `${import.meta.env.VITE_API_BASE_URL}/reports/env`,
         formData,
         {
           headers: {

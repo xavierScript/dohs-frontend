@@ -41,7 +41,7 @@ const Login = () => {
 
     try {
       const loginEndpoint =
-        "https://backend.onehealth-wwrg.com/api/v1/health/login";
+        `${import.meta.env.VITE_API_BASE_URL}/health/login`;
 
       const response = await axios.post(loginEndpoint, formData);
 

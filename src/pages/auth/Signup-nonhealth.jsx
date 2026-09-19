@@ -176,7 +176,7 @@ const NonHealthSignUp = () => {
       console.log("Submitting data:", apiData);
 
       const response = await axios.post(
-        "https://backend.onehealth-wwrg.com/api/v1/non-health/signup",
+        `${import.meta.env.VITE_API_BASE_URL}/non-health/signup`,
         apiData,
         {
           headers: {

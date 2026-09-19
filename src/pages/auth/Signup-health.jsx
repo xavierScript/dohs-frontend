@@ -154,7 +154,7 @@ const SignUp = () => {
 
       // Send data to the backend
       const response = await axios.post(
-        "https://backend.onehealth-wwrg.com/api/v1/health/signup",
+        `${import.meta.env.VITE_API_BASE_URL}/health/signup`,
         submitData
       );
 

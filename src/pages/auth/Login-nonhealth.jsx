@@ -42,7 +42,7 @@ const NonHealthLogin = () => {
       console.log("Form data:", formData);
 
       const response = await axios.post(
-        "https://backend.onehealth-wwrg.com/api/v1/non-health/login",
+        `${import.meta.env.VITE_API_BASE_URL}/non-health/login`,
         {
           email: formData.email,
           password: formData.password,

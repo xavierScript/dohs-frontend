@@ -38,7 +38,7 @@ const ForgotPassword = () => {
     try {
       // Note: You'll need to provide the correct endpoint for requesting password reset
       const response = await axios.post(
-        "https://backend.onehealth-wwrg.com/api/v1/health/forgot-password",
+        `${import.meta.env.VITE_API_BASE_URL}/health/forgot-password`,
         {
           email: formData.email,
         }

@@ -75,7 +75,7 @@ function OverviewDashboard() {
 
       // Fetch data with error handling for individual endpoints
       const results = await Promise.allSettled([
-        axios.get("https://backend.onehealth-wwrg.com/api/v1/reports/health", {
+        axios.get(`${import.meta.env.VITE_API_BASE_URL}/reports/health`, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
@@ -87,7 +87,7 @@ function OverviewDashboard() {
             sort_order: "desc",
           },
         }),
-        axios.get("https://backend.onehealth-wwrg.com/api/v1/reports/animal", {
+        axios.get(`${import.meta.env.VITE_API_BASE_URL}/reports/animal`, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
@@ -99,7 +99,7 @@ function OverviewDashboard() {
             sort_order: "desc",
           },
         }),
-        axios.get("https://backend.onehealth-wwrg.com/api/v1/reports/env", {
+        axios.get(`${import.meta.env.VITE_API_BASE_URL}/reports/env`, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",

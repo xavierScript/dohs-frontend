@@ -121,7 +121,7 @@ function Cases() {
       const token = localStorage.getItem("authToken");
 
       const response = await axios.get(
-        "https://backend.onehealth-wwrg.com/api/v1/reports/health",
+        `${import.meta.env.VITE_API_BASE_URL}/reports/health`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -258,7 +258,7 @@ function Cases() {
     try {
       const token = localStorage.getItem("authToken");
       const response = await axios.delete(
-        `https://backend.onehealth-wwrg.com/api/v1/reports/health/${caseItem.case_id}`,
+        `${import.meta.env.VITE_API_BASE_URL}/reports/health/${caseItem.case_id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -299,7 +299,7 @@ function Cases() {
     try {
       const token = localStorage.getItem("authToken");
       const response = await axios.post(
-        "https://backend.onehealth-wwrg.com/api/v1/reports/health",
+        `${import.meta.env.VITE_API_BASE_URL}/reports/health`,
         formData,
         {
           headers: {

@@ -107,7 +107,7 @@ const ChangePassword = () => {
       }
 
       const response = await axios.post(
-        "https://backend.onehealth-wwrg.com/api/v1/health/change-password",
+        `${import.meta.env.VITE_API_BASE_URL}/health/change-password`,
         {
           old_password: formData.old_password,
           new_password: formData.new_password,
